@@ -201,12 +201,6 @@ This comprehensive data analysis project dives deep into Swiggy's food delivery 
 
 ---
 
-## 🧹 Data Cleaning & Preprocessing
-
-<p align="center">
-  <img src="images/data-cleaning-process.png" alt="Data Cleaning Process" width="85%">
-</p>
-
 ### 🔍 **Data Quality Assessment**
 
 <div align="center">
@@ -242,7 +236,7 @@ This comprehensive data analysis project dives deep into Swiggy's food delivery 
 ## 📈 Analytics & Insights
 
 <p align="center">
-  <img src="images/analytics-overview.png" alt="Analytics Overview" width="90%">
+  <img src="screenshot Dashboard/Insights.png" alt="Analytics Overview" width="90%">
 </p>
 
 ### 🏆 **Key Performance Indicators**
