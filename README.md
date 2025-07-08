@@ -58,7 +58,7 @@ This comprehensive data analysis project dives deep into Swiggy's food delivery 
 ## 📊 Dataset Architecture
 
 <p align="center">
-  <img src="images/dataset-architecture.png" alt="Dataset Architecture" width="90%">
+  <img src="screenshot Dashboard/arch.png" alt="Dataset Architecture" width="90%">
 </p>
 
 ### 🗂️ **Data Schema**
