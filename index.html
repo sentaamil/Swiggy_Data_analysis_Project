@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swiggy Data Analysis Banner</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+
+        .banner-container {
+            width: 100%;
+            max-width: 1200px;
+            height: 400px;
+            margin: 0 auto;
+            background: linear-gradient(135deg, #FF6B35 0%, #FF8E53 50%, #FFA366 100%);
+            border-radius: 20px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(255, 107, 53, 0.3);
+        }
+
+        .banner-content {
+            position: relative;
+            z-index: 10;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            padding: 40px 60px;
+            color: white;
+        }
+
+        .left-content {
+            flex: 1;
+            animation: slideInLeft 1s ease-out;
+        }
+
+        .right-content {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: slideInRight 1s ease-out;
+        }
+
+        .banner-title {
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            line-height: 1.1;
+        }
+
+        .banner-subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            opacity: 0.95;
+            font-weight: 600;
+        }
+
+        .banner-description {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            opacity: 0.9;
+            margin-bottom: 25px;
+        }
+
+        .stats-container {
+            display: flex;
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .stat-item {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 12px 20px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .stat-item:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.25);
+        }
+
+        .stat-number {
+            font-size: 1.5rem;
+            font-weight: 900;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            margin-top: 5px;
+        }
+
+        .visual-elements {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+        }
+
+        .chart-icon {
+            position: absolute;
+            width: 350px;
+            height: 350px;
+            right: 50px;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 0.3;
+            animation: rotate 20s linear infinite;
+        }
+
+        .floating-icon {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .floating-icon:nth-child(1) {
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .floating-icon:nth-child(2) {
+            top: 60%;
+            left: 20%;
+            animation-delay: 1s;
+        }
+
+        .floating-icon:nth-child(3) {
+            top: 30%;
+            right: 15%;
+            animation-delay: 2s;
+        }
+
+        .floating-icon:nth-child(4) {
+            bottom: 20%;
+            right: 25%;
+            animation-delay: 0.5s;
+        }
+
+        .data-particles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
+
+        .particle {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background: rgba(255, 255, 255, 0.4);
+            border-radius: 50%;
+            animation: particle-float 4s ease-in-out infinite;
+        }
+
+        .particle:nth-child(1) { top: 10%; left: 15%; animation-delay: 0s; }
+        .particle:nth-child(2) { top: 25%; left: 80%; animation-delay: 1s; }
+        .particle:nth-child(3) { top: 70%; left: 10%; animation-delay: 2s; }
+        .particle:nth-child(4) { top: 80%; left: 70%; animation-delay: 1.5s; }
+        .particle:nth-child(5) { top: 40%; left: 90%; animation-delay: 0.5s; }
+
+        .swiggy-icon {
+            width: 80px;
+            height: 80px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: bold;
+            color: #FF6B35;
+            position: absolute;
+            top: 30px;
+            right: 60px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        .analytics-chart {
+            position: absolute;
+            right: 80px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 300px;
+            height: 200px;
+            opacity: 0.2;
+        }
+
+        .chart-bar {
+            position: absolute;
+            bottom: 0;
+            background: white;
+            border-radius: 4px 4px 0 0;
+            animation: bar-grow 2s ease-out infinite;
+        }
+
+        .chart-bar:nth-child(1) { left: 20px; width: 20px; height: 60px; animation-delay: 0s; }
+        .chart-bar:nth-child(2) { left: 50px; width: 20px; height: 100px; animation-delay: 0.2s; }
+        .chart-bar:nth-child(3) { left: 80px; width: 20px; height: 140px; animation-delay: 0.4s; }
+        .chart-bar:nth-child(4) { left: 110px; width: 20px; height: 80px; animation-delay: 0.6s; }
+        .chart-bar:nth-child(5) { left: 140px; width: 20px; height: 160px; animation-delay: 0.8s; }
+        .chart-bar:nth-child(6) { left: 170px; width: 20px; height: 120px; animation-delay: 1s; }
+
+        @keyframes slideInLeft {
+            from { transform: translateX(-100px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        @keyframes slideInRight {
+            from { transform: translateX(100px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        @keyframes rotate {
+            from { transform: translateY(-50%) rotate(0deg); }
+            to { transform: translateY(-50%) rotate(360deg); }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        @keyframes particle-float {
+            0%, 100% { transform: translateY(0px) scale(1); opacity: 0.4; }
+            50% { transform: translateY(-30px) scale(1.2); opacity: 0.8; }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); }
+            50% { transform: scale(1.05); box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3); }
+        }
+
+        @keyframes bar-grow {
+            0% { height: 0; }
+            100% { height: inherit; }
+        }
+
+        .gradient-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(255, 107, 53, 0.1) 0%, rgba(255, 163, 102, 0.1) 100%);
+            pointer-events: none;
+        }
+
+        @media (max-width: 768px) {
+            .banner-container {
+                height: 300px;
+            }
+            
+            .banner-content {
+                padding: 20px 30px;
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .banner-title {
+                font-size: 2.5rem;
+            }
+            
+            .stats-container {
+                flex-wrap: wrap;
+                gap: 15px;
+                justify-content: center;
+            }
+            
+            .analytics-chart {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="banner-container">
+        <div class="gradient-overlay"></div>
+        
+        <div class="visual-elements">
+            <div class="floating-icon"></div>
+            <div class="floating-icon"></div>
+            <div class="floating-icon"></div>
+            <div class="floating-icon"></div>
+            
+            <div class="data-particles">
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+            </div>
+            
+            <div class="analytics-chart">
+                <div class="chart-bar"></div>
+                <div class="chart-bar"></div>
+                <div class="chart-bar"></div>
+                <div class="chart-bar"></div>
+                <div class="chart-bar"></div>
+                <div class="chart-bar"></div>
+            </div>
+        </div>
+        
+        <div class="swiggy-icon">
+            🍔
+        </div>
+        
+        <div class="banner-content">
+            <div class="left-content">
+                <h1 class="banner-title">SWIGGY<br>DATA ANALYSIS</h1>
+                <p class="banner-subtitle">Comprehensive Food Delivery Analytics</p>
+                <p class="banner-description">
+                    Unlock powerful insights from 100K+ users and 5.2M+ menu items through 
+                    advanced data processing and interactive visualizations.
+                </p>
+                
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <span class="stat-number">₹265M+</span>
+                        <span class="stat-label">Revenue</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">100K+</span>
+                        <span class="stat-label">Users</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">5.2M+</span>
+                        <span class="stat-label">Items</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="right-content">
+                <svg class="chart-icon" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="100" cy="100" r="80" stroke="rgba(255,255,255,0.3)" stroke-width="2" fill="none"/>
+                    <circle cx="100" cy="100" r="60" stroke="rgba(255,255,255,0.2)" stroke-width="1" fill="none"/>
+                    <circle cx="100" cy="100" r="40" stroke="rgba(255,255,255,0.1)" stroke-width="1" fill="none"/>
+                    
+                    <path d="M100 20 L110 30 L100 40 L90 30 Z" fill="rgba(255,255,255,0.6)"/>
+                    <path d="M180 100 L170 110 L160 100 L170 90 Z" fill="rgba(255,255,255,0.5)"/>
+                    <path d="M100 180 L90 170 L100 160 L110 170 Z" fill="rgba(255,255,255,0.4)"/>
+                    <path d="M20 100 L30 90 L40 100 L30 110 Z" fill="rgba(255,255,255,0.3)"/>
+                    
+                    <circle cx="100" cy="100" r="8" fill="white"/>
+                    <circle cx="100" cy="60" r="4" fill="rgba(255,255,255,0.8)"/>
+                    <circle cx="140" cy="100" r="4" fill="rgba(255,255,255,0.7)"/>
+                    <circle cx="100" cy="140" r="4" fill="rgba(255,255,255,0.6)"/>
+                    <circle cx="60" cy="100" r="4" fill="rgba(255,255,255,0.5)"/>
+                </svg>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
