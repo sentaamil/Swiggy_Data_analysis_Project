@@ -2,7 +2,7 @@
 
 <!-- Banner Image -->
 <p align="center">
-  <img src="images/banner.png" alt="🍔 Swiggy Data Analysis Project" width="100%">
+  <img src="screenshot Dashboard/banner.png" alt="🍔 Swiggy Data Analysis Project" width="100%">
 </p>
 
 <div align="center">
