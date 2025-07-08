@@ -158,10 +158,6 @@ This comprehensive data analysis project dives deep into Swiggy's food delivery 
 
 ### 🔧 **Technology Stack**
 
-<p align="center">
-  <img src="images/tech-stack.png" alt="Technology Stack" width="70%">
-</p>
-
 <div align="center">
 
 | **Category** | **Technology** | **Purpose** |
