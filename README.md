@@ -239,39 +239,10 @@ This comprehensive data analysis project dives deep into Swiggy's food delivery 
   <img src="screenshot Dashboard/Insights.png" alt="Analytics Overview" width="90%">
 </p>
 
-### 🏆 **Key Performance Indicators**
-
-<div align="center">
-<table>
-<tr>
-<td align="center" width="25%">
-<img src="screenshot Dashboard/revenue.png" alt="Revenue" width="60">
-<h3>₹265M+</h3>
-<p><strong>Total Revenue</strong></p>
-</td>
-<td align="center" width="25%">
-<img src="screenshot Dashboard/order .png" alt="Orders" width="60">
-<h3>5.2M+</h3>
-<p><strong>Menu Items</strong></p>
-</td>
-<td align="center" width="25%">
-<img src="images/users-icon.png" alt="Users" width="60">
-<h3>100K+</h3>
-<p><strong>Active Users</strong></p>
-</td>
-<td align="center" width="25%">
-<img src="images/growth-icon.png" alt="Growth" width="60">
-<h3>7.2%</h3>
-<p><strong>Veg Premium</strong></p>
-</td>
-</tr>
-</table>
-</div>
-
 ### 🎯 **Strategic Insights**
 
 <p align="center">
-  <img src="images/insights-banner.png" alt="Strategic Insights" width="100%">
+  <img src="screenshot Dashboard/Dashboard2.png" alt="Strategic Insights" width="100%">
 </p>
 
 <div align="center">
@@ -290,7 +261,7 @@ This comprehensive data analysis project dives deep into Swiggy's food delivery 
 ## 📊 Interactive Dashboard
 
 <p align="center">
-  <img src="screenshot Dashboard/cover.png" alt="Dashboard Cover" width="100%">
+  <img src="screenshot Dashboard/Dashboard 1.png" alt="Dashboard Cover" width="100%">
 </p>
 
 ### 🖥️ **Dashboard Features**
@@ -301,7 +272,7 @@ This comprehensive data analysis project dives deep into Swiggy's food delivery 
 <td width="50%">
 
 #### 📊 **Sales Analytics**
-<img src="screenshot Dashboard/Dashboard1.png" alt="Sales Dashboard" width="100%">
+<img src="screenshot Dashboard/Dashboard2.png" alt="Sales Dashboard" width="100%">
 
 **Key Metrics:**
 - Real-time revenue tracking
@@ -340,7 +311,7 @@ This comprehensive data analysis project dives deep into Swiggy's food delivery 
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/swiggy-data-analysis.git
+git clone https://github.com/sentaamil/swiggy-data-analysis.git
 cd swiggy-data-analysis
 
 # Install dependencies
@@ -389,46 +360,9 @@ jupyter notebook Swigy.ipynb
 ## 🎨 Visualizations Gallery
 
 <p align="center">
-  <img src="images/visualization-gallery.png" alt="Visualization Gallery" width="100%">
+  <img src="screenshot Dashboard/Dashboard 1.png" alt="Visualization Gallery" width="100%">
 </p>
 
-### 📊 **Chart Types & Insights**
-
-<div align="center">
-<table>
-<tr>
-<td width="33%">
-
-#### 📈 **Trend Analysis**
-<img src="images/trend-chart.png" alt="Trend Analysis" width="100%">
-**Revenue growth patterns over time**
-
-</td>
-<td width="33%">
-
-#### 🥧 **Category Distribution**
-<img src="images/pie-chart.png" alt="Category Distribution" width="100%">
-**Veg vs Non-veg sales breakdown**
-
-</td>
-<td width="33%">
-
-#### 🗺️ **Geographic Insights**
-<img src="images/map-chart.png" alt="Geographic Insights" width="100%">
-**City-wise performance analysis**
-
-</td>
-</tr>
-</table>
-</div>
-
----
-
-## 🔬 Advanced Analytics
-
-<p align="center">
-  <img src="images/advanced-analytics.png" alt="Advanced Analytics" width="90%">
-</p>
 
 ### 🤖 **Machine Learning Integration**
 
@@ -448,35 +382,6 @@ jupyter notebook Swigy.ipynb
 
 ## 🏆 Project Outcomes
 
-### 📊 **Business Impact**
-
-<div align="center">
-<table>
-<tr>
-<td align="center" width="25%">
-<img src="images/efficiency-icon.png" alt="Efficiency" width="50">
-<h3>40%</h3>
-<p><strong>Processing Speed Improvement</strong></p>
-</td>
-<td align="center" width="25%">
-<img src="images/accuracy-icon.png" alt="Accuracy" width="50">
-<h3>99.9%</h3>
-<p><strong>Data Accuracy</strong></p>
-</td>
-<td align="center" width="25%">
-<img src="images/insights-icon.png" alt="Insights" width="50">
-<h3>50+</h3>
-<p><strong>Actionable Insights</strong></p>
-</td>
-<td align="center" width="25%">
-<img src="images/automation-icon.png" alt="Automation" width="50">
-<h3>85%</h3>
-<p><strong>Process Automation</strong></p>
-</td>
-</tr>
-</table>
-</div>
-
 ### 🎯 **Strategic Recommendations**
 
 1. **🥗 Menu Strategy**: Expand vegetarian offerings by 25%
@@ -485,12 +390,6 @@ jupyter notebook Swigy.ipynb
 4. **🤖 Technology Enhancement**: Deploy ML-powered recommendation systems
 
 ---
-
-## 📚 Documentation
-
-<p align="center">
-  <img src="images/documentation.png" alt="Documentation" width="80%">
-</p>
 
 ### 📖 **Available Resources**
 
@@ -503,17 +402,13 @@ jupyter notebook Swigy.ipynb
 
 ## 🤝 Contributing
 
-<p align="center">
-  <img src="images/contributing.png" alt="Contributing" width="70%">
-</p>
-
 We welcome contributions from the community! Here's how you can help:
 
 ### 🛠️ **Development Process**
 
 1. **🔀 Fork the Repository**
    ```bash
-   git fork https://github.com/yourusername/swiggy-data-analysis.git
+   git fork https://github.com/sentaamil/swiggy-data-analysis.git
    ```
 
 2. **🌿 Create Feature Branch**
@@ -544,10 +439,6 @@ We welcome contributions from the community! Here's how you can help:
 
 ## 📄 License
 
-<p align="center">
-  <img src="images/license.png" alt="License" width="60%">
-</p>
-
 This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
 
 ---
@@ -569,12 +460,6 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 ## 📞 Contact & Support
 
-<p align="center">
-  <img src="images/contact.png" alt="Contact" width="80%">
-</p>
-
-<div align="center">
-
 **Get In Touch**
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/yourprofile)
@@ -585,12 +470,6 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 </div>
 
 ---
-
-<p align="center">
-  <img src="images/footer.png" alt="Footer" width="100%">
-</p>
-
-<div align="center">
 
 **⭐ Star this repository if you found it helpful!**
 
