@@ -23,7 +23,7 @@
 This comprehensive data analysis project dives deep into Swiggy's food delivery ecosystem, analyzing patterns across **100,000 users** and **5.2 million menu items**. Through advanced data cleaning, transformation, and visualization techniques, this project uncovers actionable insights that drive business intelligence for one of India's leading food delivery platforms.
 
 <p align="center">
-  <img src="images/overview.png" alt="Project Overview" width="80%">
+  <img src="screenshot Dashboard/overview.png" alt="Project Overview" width="80%">
 </p>
 
 ---
