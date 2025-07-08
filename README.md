@@ -245,12 +245,12 @@ This comprehensive data analysis project dives deep into Swiggy's food delivery 
 <table>
 <tr>
 <td align="center" width="25%">
-<img src="images/revenue-icon.png" alt="Revenue" width="60">
+<img src="screenshot Dashboard/revenue.png" alt="Revenue" width="60">
 <h3>₹265M+</h3>
 <p><strong>Total Revenue</strong></p>
 </td>
 <td align="center" width="25%">
-<img src="images/orders-icon.png" alt="Orders" width="60">
+<img src="screenshot Dashboard/order .png" alt="Orders" width="60">
 <h3>5.2M+</h3>
 <p><strong>Menu Items</strong></p>
 </td>
